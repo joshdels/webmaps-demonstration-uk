@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "iow_town",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Town": "Cowes", "Easting": 449620, "Northing": 96040 }, "geometry": { "type": "Point", "coordinates": [ -1.297825306571125, 50.761827086184255 ] } },
+{ "type": "Feature", "properties": { "Town": "Newport", "Easting": 450320, "Northing": 89360 }, "geometry": { "type": "Point", "coordinates": [ -1.288811296703144, 50.701700228253479 ] } },
+{ "type": "Feature", "properties": { "Town": "Ryde", "Easting": 459540, "Northing": 92540 }, "geometry": { "type": "Point", "coordinates": [ -1.15775373632481, 50.72942485080543 ] } },
+{ "type": "Feature", "properties": { "Town": "Bembridge", "Easting": 465180, "Northing": 87740 }, "geometry": { "type": "Point", "coordinates": [ -1.078698488233591, 50.685660792906276 ] } },
+{ "type": "Feature", "properties": { "Town": "Brading", "Easting": 460860, "Northing": 86980 }, "geometry": { "type": "Point", "coordinates": [ -1.139968649960479, 50.679294001069131 ] } },
+{ "type": "Feature", "properties": { "Town": "East Cowes", "Easting": 450700, "Northing": 95640 }, "geometry": { "type": "Point", "coordinates": [ -1.282568879300375, 50.758137187785522 ] } },
+{ "type": "Feature", "properties": { "Town": "Sandown", "Easting": 459940, "Northing": 84240 }, "geometry": { "type": "Point", "coordinates": [ -1.153431654096765, 50.654751716229569 ] } },
+{ "type": "Feature", "properties": { "Town": "Shanklin", "Easting": 458600, "Northing": 81260 }, "geometry": { "type": "Point", "coordinates": [ -1.172856132362477, 50.628092140325769 ] } },
+{ "type": "Feature", "properties": { "Town": "Totland", "Easting": 433360, "Northing": 87440 }, "geometry": { "type": "Point", "coordinates": [ -1.529131430858047, 50.685653352617123 ] } },
+{ "type": "Feature", "properties": { "Town": "Ventnor", "Easting": 456420, "Northing": 77660 }, "geometry": { "type": "Point", "coordinates": [ -1.204220065492694, 50.595936269189998 ] } }
+]
+}

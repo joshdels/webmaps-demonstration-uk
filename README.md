@@ -1,0 +1,1 @@
+purposely put the googlemap api with restriction on the google api platform
