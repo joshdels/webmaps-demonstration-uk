@@ -17,6 +17,7 @@
   });
 
   const roadsLayer = new FeatureLayer({
+    // Change this data if load
     url: "https://services1.arcgis.com/6677msI40mnLuuLr/arcgis/rest/services/Isle_of_Wight_WFL1/FeatureServer/5",
     outFields: ["*"],
     popupEnabled: true,
@@ -25,11 +26,15 @@
 
   map.add(roadsLayer);
 
-  roadsLayer.when(() => {
-    roadsLayer.queryExtent().then((result) => {
-      if (result.extent) {
-        view.goTo(result.extent);
-      }
-    });
-  });
+  try {
+    await roadsLayer.when();
+    const layerView = await view.whenLayerView(roadsLayer);
+    const result = await roadsLayer.queryExtent();
+
+    if (result.extent) {
+      view.goTo(result.extent, { duration: 1500 });
+    }
+  } catch (error) {
+    console.error("Error zooming to layer:", error);
+  }
 })();

@@ -8,10 +8,11 @@ function initMap() {
   });
 
   const kmlLayer = new google.maps.KmlLayer({
-    url: "https://raw.githubusercontent.com/username/repo/main/iow_outline.kml",
+    // Change this KMZ file that you hosted on github
+    url: "https://raw.githubusercontent.com/joshdels/webmaps-demonstration-uk/main/data/iow_outline.kml",
     map: googleMap,
-    preserveViewport: false,
-    suppressInfoWindows: false
+    preserveViewport: true,
+    suppressInfoWindows: true,
   });
 
   kmlLayer.addListener("status_changed", () => {
