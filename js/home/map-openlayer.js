@@ -12,7 +12,6 @@ const mapOL = new ol.Map({
   }),
 });
 
-// ====== LayerManager Adapter ======
 const olLayers = {};
 
 LayerManager.registerMap({

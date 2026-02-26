@@ -181,6 +181,69 @@ footer {
 }
 
 
+.data-source-card .description {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.layer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.layer-item {
+  padding: 12px 14px;
+  background: #f8f9fa;
+}
+
+.layer-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.layer-header strong {
+  font-size: 1rem;
+  color: #212529;
+}
+
+.layer-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.url-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.url-container code {
+  background: #e9ecef;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  word-break: break-all;
+  flex: 1 1 auto;
+}
+
+.copy-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Responsive Devices */
 @media (max-width: 992px) {
   aside.col-lg-4,

@@ -30,11 +30,11 @@
       </button>
       <div class="collapse navbar-collapse" id="mynav">
         <ul class="navbar-nav ms-auto">
-          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="page1.html">Image Map</a></li>
           <li><a class="nav-link" href="page2.html">Google KMZ</a></li>
           <li><a class="nav-link" href="page3.html">Enterprise</a></li>
-          <li><a class="nav-link" href="page4.html">Open Source</a></li>
+          <li><a class="nav-link active" href="page4.html">Open Source</a></li>
         </ul>
       </div>
     </div>
@@ -45,76 +45,21 @@
       
       <aside class="col-lg-4">
         <div class="sidebar-card">
-          <h3>About Me</h3>
-          <div class="fakeimg mb-3">
-             <span>Profile Photo</span>
-          </div>
+          <h3>Open Source</h3>
           <p class="text-muted">More Information</p>
-          
-          <h4 class="mt-4">Video</h4>
-          <ul class="nav nav-pills flex-column">
-            <a class="video-link" href="#">Link to Video</a>
-          </ul>
         </div>
 
-        <div class="sidebar-card-data-toggler">
-          <h3>Map Layers</h3>
-          <p>Click the checkbox to display the map layer</p>
-          
-          <div id="layer-control-group" class="layer-control-group">
-            <label class="layer-checkbox">
-              <input type="checkbox" value="iow_town">
-              <span class="checkmark"></span>
-              <span class="label-text">Town Population</span>
-            </label>
-
-            <label class="layer-checkbox">
-              <input type="checkbox" value="iow_outline">
-              <span class="checkmark"></span>
-              <span class="label-text">Island Outline</span>
-            </label>
-
-            <label class="layer-checkbox">
-              <input type="checkbox" value="iow_5kgrid_rain">
-              <span class="checkmark"></span>
-              <span class="label-text">Rainfall</span>
-            </label>
-          </div>
+        <div class="sidebar-card">
+          <h3>Data Source</h3>
         </div>
       </aside>
 
       <main class="col-lg-8">
-        <h2 class="mb-4">Web Mapping Overview</h2>
-
         <section class="map-container">
           <h5 class="map-title">Leaflet</h5>
           <div id="map-leaflet" class="map-box"></div>
           <div class="mt-3">
             <p><strong>Note:</strong> Using OpenStreetMap tiles. Best for lightweight mobile applications.</p>
-          </div>
-        </section>
-
-        <section class="map-container">
-          <h5 class="map-title">Open Layer</h5>
-          <div id="map-openlayer" class="map-box"></div>
-          <div class="mt-3">
-            <p><strong>Note:</strong> This map is built with the OpenLayers API, supporting OpenStreetMap tiles and interactive features. Ideal for mobile-friendly applications.</p>
-          </div>
-        </section>
-
-        <section class="map-container">
-          <h5 class="map-title">ArcGIS SDK</h5>
-          <div id="map-arcgis" class="map-box"></div>
-          <div class="mt-3">
-            <p><strong>Note:</strong> High-performance vector rendering for complex spatial datasets.</p>
-          </div>
-        </section>
-
-        <section class="map-container">
-          <h5 class="map-title">Google Maps API</h5>
-          <div id="map-google" class="map-box"></div>
-          <div class="mt-3">
-            <p><strong>Note:</strong> Standard for street view and high-accuracy POI data.</p>
           </div>
         </section>
       </main>
@@ -136,12 +81,11 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9ffBT76X1NrvfhQLJQQ855qWc7sKVQmQ&callback&loading=async&libraries=marker&callback=initMap">
   </script>
 
-  <script src="js/home/layer-manager.js"></script>
-  <script src="js/home/map-leaflet.js"></script>
-  <script src="js/home/map-openlayer.js"></script>
-  <script type="module" src="js/home/map-arcgis.js"></script>
-  <script src="js/home/map-google.js"></script>
-  <script src="js/home/data-toggler.js"></script>
   
+  <script src="js/opensource/map-leaflet.js"></script>
+  <script src="js/opensource/map-openlayer.js"></script>
+  <script type="module" src="js/map-arcgis.js"></script>
+  <script src="js/map-google.js"></script>
+
 </body>
 </html>
