@@ -5,30 +5,8 @@
     "@arcgis/core/layers/GeoJSONLayer.js",
   ]);
 
-  // Fetching Data
-  const url = "data/iow_town.geojson";
-
-  // Create the GeoJSON layer
-  const layer = new GeoJSONLayer({
-    url: url,
-    title: "Towns",
-    popupTemplate: {
-      title: "{name}",
-      content: (feature) => {
-        const attrs = feature.graphic.attributes;
-        let content = "<table>";
-        for (const key in attrs) {
-          content += `<tr><td><b>${key}:</b></td><td>${attrs[key]}</td></tr>`;
-        }
-        content += "</table>";
-        return content;
-      },
-    },
-  });
-
   const map = new Map({
     basemap: "topo-vector",
-    layers: [layer],
   });
 
   const view = new MapView({
@@ -38,12 +16,57 @@
     center: [-1.3, 50.7],
   });
 
-  // Zooming
-  layer.when(() => {
-    layer.queryExtent().then((result) => {
-      if (result.extent) {
-        view.goTo(result.extent.expand(1.2));
+  const arcgisLayers = {};
+
+  LayerManager.registerMap({
+    addLayer: function (layerName, url) {
+      if (!arcgisLayers[layerName]) {
+        const layer = new GeoJSONLayer({
+          url: url,
+
+          popupTemplate: {
+            title: "{name}",
+
+            content: function (feature) {
+              const attrs = feature.graphic.attributes;
+
+              let content = "<table>";
+
+              for (const key in attrs) {
+                content += `
+                <tr>
+                  <td><b>${key}</b></td>
+                  <td>${attrs[key]}</td>
+                </tr>
+              `;
+              }
+
+              content += "</table>";
+
+              return content;
+            },
+          },
+        });
+
+        arcgisLayers[layerName] = layer;
+        map.add(layer);
+
+        layer.when(() => {
+          layer.queryExtent().then((result) => {
+            if (result.extent) {
+              view.goTo(result.extent.expand(1.2));
+            }
+          });
+        });
+      } else {
+        map.add(arcgisLayers[layerName]);
       }
-    });
+    },
+
+    removeLayer: function (layerName) {
+      if (arcgisLayers[layerName]) {
+        map.remove(arcgisLayers[layerName]);
+      }
+    },
   });
 })();

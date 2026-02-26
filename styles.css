@@ -42,6 +42,22 @@ body {
   margin-bottom: 15px;
 }
 
+.sidebar-card-data-toggler {
+  background: white;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: none;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+}
+
+aside.col-lg-4 {
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+}
+
 .fakeimg {
   height: 200px;
   background: #e9ecef;
@@ -162,4 +178,15 @@ body {
 footer {
   margin-top: 100px;
   padding: 50px 0;
+}
+
+
+/* Responsive Devices */
+@media (max-width: 992px) {
+  aside.col-lg-4,
+  .sidebar-card-data-toggler {
+    position: static;
+    top: auto;
+    align-self: auto;
+  }
 }

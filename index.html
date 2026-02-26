@@ -56,25 +56,25 @@
           </ul>
         </div>
 
-        <div class="sidebar-card">
+        <div class="sidebar-card-data-toggler">
           <h3>Map Layers</h3>
           <p>Click the checkbox to display the map layer</p>
           
-          <div class="layer-control-group">
+          <div id="layer-control-group" class="layer-control-group">
             <label class="layer-checkbox">
-              <input type="checkbox" value="town-population">
+              <input type="checkbox" value="iow_town">
               <span class="checkmark"></span>
               <span class="label-text">Town Population</span>
             </label>
 
             <label class="layer-checkbox">
-              <input type="checkbox" value="island">
+              <input type="checkbox" value="iow_outline">
               <span class="checkmark"></span>
               <span class="label-text">Island Outline</span>
             </label>
 
             <label class="layer-checkbox">
-              <input type="checkbox" value="rainfall">
+              <input type="checkbox" value="iow_5kgrid_rain">
               <span class="checkmark"></span>
               <span class="label-text">Rainfall</span>
             </label>
@@ -135,11 +135,12 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9ffBT76X1NrvfhQLJQQ855qWc7sKVQmQ&callback&loading=async&libraries=marker&callback=initMap">
   </script>
 
-  <!-- <script src="js/data-toggler.js"></script> -->
+  <script src="js/layer-manager.js"></script>
   <script src="js/map-leaflet.js"></script>
   <script src="js/map-openlayer.js"></script>
   <script type="module" src="js/map-arcgis.js"></script>
   <script src="js/map-google.js"></script>
-
+  <script src="js/data-toggler.js"></script>
+  
 </body>
 </html>

@@ -1,8 +1,18 @@
-const layerControl = document.getElementById("layer-control-group");
-const checkboxes = layerControl.querySelector('input[type=:checkbox"]');
+document.addEventListener("DOMContentLoaded", function () {
 
-checkboxes.forEach((boxes) => {
-  if (boxes.checked) {
-    console.log(boxes.value);
-  }
+  document.querySelectorAll('#layer-control-group input[type="checkbox"]')
+    .forEach((box) => {
+
+      box.addEventListener("change", function () {
+
+        if (this.checked) {
+          LayerManager.addLayer(this.value);
+        } else {
+          LayerManager.removeLayer(this.value);
+        }
+
+      });
+
+    });
+
 });
