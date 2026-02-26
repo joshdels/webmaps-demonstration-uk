@@ -57,7 +57,7 @@
             <div class="layer-item">
               <div class="layer-header">
                 <strong>iow_town.geojson</strong>
-                <span class="layer-description">outline</span>
+                <span class="layer-description">town</span>
               </div>
               <div class="url-container">
                 <!-- Change the data with your own code -->
@@ -66,7 +66,22 @@
               </div>
             </div>
           </div>
+          
+          <div class="layer-list">
+            <div class="layer-item">
+              <div class="layer-header">
+                <strong>iow_outline.geojson</strong>
+                <span class="layer-description">outline</span>
+              </div>
+              <div class="url-container">
+                <!-- Change the data with your own code -->
+                <code>https://raw.githubusercontent.com/joshdels/webmaps-demonstration-uk/main/data/iow_outline.geojson</code>
+                <button class="copy-btn" onclick="copyURLOutline()">Copy</button>
+              </div>
+            </div>
+          </div>
         </div>
+
       </aside>
 
       <main class="col-lg-8">
@@ -99,8 +114,7 @@
   
   <script src="js/opensource/map-leaflet.js"></script>
   <script src="js/opensource/map-openlayer.js"></script>
-  <script type="module" src="js/map-arcgis.js"></script>
-  <script src="js/map-google.js"></script>
+  <script src="js/opensource/index.js"></script>
 
 </body>
 </html>

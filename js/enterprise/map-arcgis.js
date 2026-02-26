@@ -1,9 +1,12 @@
 (async () => {
-  const [Map, MapView, FeatureLayer] = await $arcgis.import([
-    "@arcgis/core/Map.js",
-    "@arcgis/core/views/MapView.js",
-    "@arcgis/core/layers/FeatureLayer",
-  ]);
+  const [Map, MapView, FeatureLayer, GeoJSONLayer, Legend] =
+    await $arcgis.import([
+      "@arcgis/core/Map.js",
+      "@arcgis/core/views/MapView.js",
+      "@arcgis/core/layers/FeatureLayer",
+      "@arcgis/core/layers/GeoJSONLayer.js",
+      "@arcgis/core/widgets/Legend.js",
+    ]);
 
   const map = new Map({
     basemap: "topo-vector",
@@ -25,6 +28,38 @@
   });
 
   map.add(roadsLayer);
+
+  const townsLayer = new GeoJSONLayer({
+    url: "data/iow_town.geojson",
+    visible: true,
+    popupTemplate: {
+      title: "{Town}",
+      content: `
+        Easting: {Easting} <br>
+        Northing: {Northing}
+      `,
+    },
+    renderer: {
+      type: "simple",
+      symbol: {
+        type: "picture-marker",
+        url: "https://static.arcgis.com/icons/places/City_Hall_15.svg",
+        width: "24px",
+        height: "24px",
+      },
+    },
+  });
+
+  map.add(townsLayer);
+
+  const legend = new Legend({
+    view: view,
+    layerInfos: [
+      { layer: roadsLayer, title: "Roads" },
+      { layer: townsLayer, title: "Towns" },
+    ],
+    container: "legendDiv",
+  });
 
   try {
     await roadsLayer.when();
