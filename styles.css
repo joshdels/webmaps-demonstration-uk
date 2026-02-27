@@ -89,7 +89,7 @@ aside.col-lg-4 {
 
 .map-box {
   width: 100%;
-  height: 50vh;
+  height: 600px;
   border: 1px solid #ddd;
   z-index: 10;
   position: relative;
@@ -262,7 +262,43 @@ footer {
 .source-logo {
   height: 45px;
   width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
+
+.source-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(85%);
+}
+
+.image-map {
+  position: relative;
+  width: 100%;
+}
+
+.map-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 50;
+
+  background: #007bff;
+  padding: 6px;
+  border-radius: 50%;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-pin:hover {
+  transform: scale(1.05);
+  background: #0056b3;
+  transition: 0.2s ease;
+}
+
 
 .image-map-comment {
   display: flex;
@@ -299,6 +335,6 @@ footer {
     align-self: auto;
   }
   .map-box {
-    height: 30vh;
+    height: 450px;
   }
 }
