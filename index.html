@@ -7,10 +7,10 @@
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://js.arcgis.com/5.0/esri/themes/light/main.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
-  
   <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </head>
 <body>
@@ -45,13 +45,12 @@
       
       <aside class="col-lg-3">
         <div class="sidebar-card">
-          <h3>About Me</h3>
-          <div class="fakeimg mb-3">
-             <span>Profile Photo</span>
-          </div>
-          <p class="text-muted">More Information</p>
-          
-          <h4 class="mt-4">Video</h4>
+          <h3>Welcome</h3>
+          <img src="image/logo.jpeg" class="fakeimg" alt="logo">
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Video</h3>
           <ul class="nav nav-pills flex-column">
             <a class="video-link" href="#">Link to Video</a>
           </ul>
@@ -59,7 +58,7 @@
 
         <div class="sidebar-card-data-toggler">
           <h3>Map Layers</h3>
-          <p>Click the checkbox to display the map layer</p>
+          <p class="sidebar-subtext">Click the checkbox to display the map layer</p>
           
           <div id="layer-control-group" class="layer-control-group">
             <label class="layer-checkbox">
@@ -102,19 +101,8 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
-  <script type="module" src="https://js.arcgis.com/5.0/"></script>
-  <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9ffBT76X1NrvfhQLJQQ855qWc7sKVQmQ&callback&loading=async&libraries=marker&callback=initMap">
-  </script>
-
   <script src="js/home/layer-manager.js"></script>
   <script src="js/home/map-leaflet.js"></script>
-  <script src="js/home/map-openlayer.js"></script>
-  <script type="module" src="js/home/map-arcgis.js"></script>
-  <script src="js/home/map-google.js"></script>
   <script src="js/home/data-toggler.js"></script>
   
 </body>

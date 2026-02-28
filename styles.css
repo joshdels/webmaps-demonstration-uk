@@ -52,6 +52,11 @@ body {
   top: 0;
 }
 
+.sidebar-subtext {
+  font-size: 0.8rem;
+  color: rgb(58, 58, 58);
+}
+
 aside.col-lg-4 {
   position: sticky;
   top: 80px;
@@ -59,13 +64,12 @@ aside.col-lg-4 {
 }
 
 .fakeimg {
-  height: 200px;
-  background: #e9ecef;
-  display: flex;
-  align-items: center;
+  width: 300px;
+  max-width: 100%; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
   justify-content: center;
-  color: #6c757d;
-  border: 2px dashed #dee2e6;
 }
 
 .video-link {
