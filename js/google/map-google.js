@@ -18,16 +18,11 @@ function initMap() {
     console.log("KML status:", outlineLayer.getStatus());
   });
 
+  googleMap.data.loadGeoJson("data/iow_roads.geojson");
 
-  const roadsLayer = new google.maps.KmlLayer({
-    url: "https://raw.githubusercontent.com/joshdels/webmaps-demonstration-uk/main/data/iow_roads.kml",
-    map: googleMap,
-    preserveViewport: true,
-    suppressInfoWindows: true,
-  });
-
-  roadsLayer.addListener("status_changed", () => {
-    console.log("KML status:", roadsLayer.getStatus());
+  googleMap.data.setStyle({
+    strokeColor: "#2f3ad3",
+    strokeWeight: 2,
   });
 
 }
