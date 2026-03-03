@@ -7,16 +7,27 @@ function initMap() {
     center: { lat: 50.7, lng: -1.3 },
   });
 
-  const kmlLayer = new google.maps.KmlLayer({
-    // Change this KMZ file that you hosted on github
+  const outlineLayer = new google.maps.KmlLayer({
     url: "https://raw.githubusercontent.com/joshdels/webmaps-demonstration-uk/main/data/iow_outline.kml",
     map: googleMap,
     preserveViewport: true,
     suppressInfoWindows: true,
   });
 
-  kmlLayer.addListener("status_changed", () => {
-    console.log("KML status:", kmlLayer.getStatus());
+  outlineLayer.addListener("status_changed", () => {
+    console.log("KML status:", outlineLayer.getStatus());
+  });
+
+
+  const roadsLayer = new google.maps.KmlLayer({
+    url: "https://raw.githubusercontent.com/joshdels/webmaps-demonstration-uk/main/data/iow_roads.kml",
+    map: googleMap,
+    preserveViewport: true,
+    suppressInfoWindows: true,
+  });
+
+  roadsLayer.addListener("status_changed", () => {
+    console.log("KML status:", roadsLayer.getStatus());
   });
 
 }

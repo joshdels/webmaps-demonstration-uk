@@ -44,8 +44,6 @@ LayerManager.registerMap({
 
           leafletLayers[layerName] = layer;
           layer.addTo(map);
-
-          // map.fitBounds(layer.getBounds(), { padding: [40, 40] });
         });
     } else {
       leafletLayers[layerName].addTo(map);

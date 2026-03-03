@@ -29,6 +29,20 @@
 
   // map.add(roadsLayer);
 
+  const roadsLayer = new GeoJSONLayer({
+    url: "data/iow_roads.geojson",
+    visible: true,
+    popupTemplate: {
+      title: "{Road}",
+      content: `
+        Easting: {Easting} <br>
+        Northing: {Northing}
+      `,
+    },
+  });
+
+  map.add(roadsLayer);
+
   const townsLayer = new GeoJSONLayer({
     url: "data/iow_town.geojson",
     visible: true,
@@ -55,7 +69,7 @@
   const legend = new Legend({
     view: view,
     layerInfos: [
-      // { layer: roadsLayer, title: "Roads" },
+      { layer: roadsLayer, title: "Roads" },
       { layer: townsLayer, title: "Towns" },
     ],
     container: "legendDiv",
