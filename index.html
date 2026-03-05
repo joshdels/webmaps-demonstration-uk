@@ -35,6 +35,7 @@
           <li><a class="nav-link" href="page2.html">Google KMZ</a></li>
           <li><a class="nav-link" href="page3.html">Enterprise</a></li>
           <li><a class="nav-link" href="page4.html">Open Source</a></li>
+          <li><a class="nav-link" href="page5.html">ArcGIS Online App</a></li>
         </ul>
       </div>
     </div>
@@ -47,13 +48,6 @@
         <div class="sidebar-card">
           <h3>Welcome</h3>
           <img src="image/logo.jpeg" class="fakeimg" alt="logo">
-        </div>
-
-        <div class="sidebar-card">
-          <h3>Video</h3>
-          <ul class="nav nav-pills flex-column">
-            <a class="video-link" href="#">Link to Video</a>
-          </ul>
         </div>
 
         <div class="sidebar-card-data-toggler">
@@ -90,10 +84,28 @@
 
       <main class="col-lg-9">
         <section class="map-container">
+          <h5 class="map-title">About</h5>
+          <div class="mt-3 narrative">
+            <p>"This website demonstrates how modern web-based GIS technologies can be used to present clear, 
+              accessible and engaging geographic information for the Isle of Wight. By combining interactive maps, 
+              open-source tools and enterprise GIS platforms, it illustrates how spatial data can be effectively 
+              shared with the public to support transparency, understanding and informed decision-making"</p>
+          </div>
+        </section>
+
+        <section class="map-container">
           <h5 class="map-title">Leaflet</h5>
           <div id="map-leaflet" class="map-box"></div>
+        </section>
+
+
+        <section class="map-container">
+          <h5 class="map-title">Video</h5>
           <div class="mt-3">
-            <p><strong>Note:</strong> Using OpenStreetMap tiles. Best for lightweight mobile applications.</p>
+          <video controls class="video-box">
+            <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           </div>
         </section>
       </main>

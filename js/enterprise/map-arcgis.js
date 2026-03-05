@@ -19,15 +19,14 @@
     center: [-1.3, 50.7],
   });
 
-  // const roadsLayer = new FeatureLayer({
-  //   // Change this data if load
-  //   url: "https://services1.arcgis.com/6677msI40mnLuuLr/arcgis/rest/services/Isle_of_Wight_WFL1/FeatureServer/5",
-  //   outFields: ["*"],
-  //   popupEnabled: true,
-  //   visible: true,
-  // });
+  const roadLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/6677msI40mnLuuLr/arcgis/rest/services/Isle_of_Wight_WFL1/FeatureServer/5",
+    outFields: ["*"],
+    popupEnabled: true,
+    visible: true,
+  });
 
-  // map.add(roadsLayer);
+  map.add(roadLayer);
 
   const roadsLayer = new GeoJSONLayer({
     url: "data/iow_roads.geojson",
