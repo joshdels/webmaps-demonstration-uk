@@ -343,7 +343,7 @@ footer {
 
 /* Responsive Devices */
 @media (max-width: 992px) {
-  aside.col-lg-4,
+  aside.col-lg-3,
   .sidebar-card-data-toggler {
     position: static;
     top: auto;
