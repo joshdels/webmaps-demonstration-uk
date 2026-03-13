@@ -1,3 +1,7 @@
+## WebGIS Libraries
+This website demonstrates how modern web-based GIS technologies can be used to present clear, accessible and engaging geographic information for the Isle of Wight. By combining interactive maps, open-source tools and enterprise GIS platforms, it illustrates how spatial data can be effectively shared with the public to support transparency, understanding and informed decision-making
+
+## TechStack
 Mapping Libraries and APIs
 Google Maps API
 Purposefully included with API restrictions on the Google API Platform.
